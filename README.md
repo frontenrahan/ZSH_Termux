@@ -10,7 +10,11 @@ curl -sL https://raw.githubusercontent.com/frontenrahan/ZSH_Termux/refs/heads/ma
 Manual Install (deb)
 
 ```bash
-pkg install ./zshauto_1.0.0_all.deb
+wget https://github.com/frontenrahan/ZSH_Termux/releases/download/v1.0.0/zshauto_1.0.0_all.deb
+```
+
+```bash
+dpkg -i ./zshauto_1.0.0_all.deb
 ```
 
 Included
@@ -24,13 +28,13 @@ Included
 Reinstall
 
 ```bash
-pkg install --reinstall ./zshauto_1.0.0_all.deb
+dpkg -i --force-depends ./zshauto_1.0.0_all.deb
 ```
 
 Remove
 
 ```bash
-pkg uninstall zshauto
+dpkg --purge zshauto
 ```
 
 After Install
