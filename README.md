@@ -15,7 +15,7 @@ pkg install ./zshauto_1.0.0_all.deb
 
 Included
 
-· zsh-syntax-highlighting (basic + fast)
+· zsh-syntax-highlighting (basic and fast)
 · zsh-autosuggestions
 · fast-highlight
 · basic-highlight
