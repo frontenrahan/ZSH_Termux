@@ -20,11 +20,11 @@ dpkg -i ./zshauto_1.0.0_all.deb
 
 Included
 
-· zsh-syntax-highlighting (basic and fast)
-· zsh-autosuggestions
-· fast-highlight
-· basic-highlight
-· Custom .zshrc
+- zsh-syntax-highlighting (basic and fast)<br>
+- zsh-autosuggestions<br>
+- fast-highlight<br>
+- basic-highlight<br>
+- Custom .zshrc
 
 Reinstall
 
