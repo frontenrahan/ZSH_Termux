@@ -28,7 +28,7 @@ Included
 Reinstall
 
 ```bash
-dpkg -i --force-depends ./zshauto_1.0.0_all.deb
+dpkg -i ./zshauto_1.0.0_all.deb
 ```
 
 Remove
