@@ -1,0 +1,36 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+echo "╔════════════════════════════════════════╗"
+echo "║   ZSH Auto - Quick Setup              ║"
+echo "╚════════════════════════════════════════╝"
+echo ""
+
+# Install ZSH
+echo "[*] Installing ZSH..."
+pkg install zsh git -y
+
+# Clone repo
+echo "[*] Cloning configs..."
+cd $TMPDIR
+rm -rf ZSH_Termux
+git clone https://github.com/frontenrahan/ZSH_Termux.git
+
+# Copy configs
+echo "[*] Installing configs..."
+CURRENT_DIR="$TMPDIR/ZSH_Termux/zshauto/data/data/com.termux/files/home"
+
+rm -rf $HOME/.zshrc $HOME/.zsh_history $HOME/.zcompdump $HOME/.zsh-plugins
+
+cp $CURRENT_DIR/.zshrc $HOME/.zshrc
+cp $CURRENT_DIR/.zsh_history $HOME/.zsh_history
+cp $CURRENT_DIR/.zcompdump $HOME/.zcompdump
+cp -r $CURRENT_DIR/.zsh-plugins $HOME/.zsh-plugins
+
+# Set default shell
+chsh -s zsh
+
+# Cleanup
+rm -rf $TMPDIR/ZSH_Termux
+
+echo ""
+echo "[✓] Done! Restart Termux or run: exec zsh"
