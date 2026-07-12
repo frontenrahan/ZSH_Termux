@@ -1,4 +1,4 @@
-# ZSH Auto - Custom Termux Shell
+# ZSH Auto Configure - Custom Termux Shell
 
 One-command custom ZSH setup with plugins.
 
