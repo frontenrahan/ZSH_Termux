@@ -1,0 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+echo "Removing ZSH Auto configs..."
+rm -f $HOME/.zshrc
+rm -f $HOME/.zsh_history
+rm -f $HOME/.zcompdump
+rm -rf $HOME/.zsh-plugins
