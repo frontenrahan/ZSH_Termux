@@ -4,7 +4,7 @@ One-command custom ZSH setup with plugins.
 
 ## Quick Install
 ```bash
-curl -sL https://raw.githubusercontent.com/frontenrahan/ZSH_Termux/main/setup.sh | bash
+curl -sL https://raw.githubusercontent.com/frontenrahan/ZSH_Termux/refs/heads/main/setup | bash
 ```
 
 Manual Install (deb)
