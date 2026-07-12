@@ -1,10 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-echo "╔════════════════════════════════════════╗"
-echo "║   ZSH Auto - Quick Setup              ║"
-echo "╚════════════════════════════════════════╝"
-echo ""
-
 # Install ZSH
 echo "[*] Installing ZSH..."
 pkg install zsh git -y
