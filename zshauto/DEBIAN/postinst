@@ -1,0 +1,6 @@
+#!/data/data/com.termux/files/usr/bin/bash
+echo ""
+echo "✓ Custom ZSH configs installed"
+echo "✓ Default shell: ZSH"
+echo ""
+echo "Restart Termux or run: exec zsh"

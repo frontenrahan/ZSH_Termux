@@ -1,0 +1,9 @@
+Package: zshauto
+Version: 1.0.0
+Section: shells
+Priority: optional
+Architecture: all
+Maintainer: frontenrahan <frontenrahan.me@gmail.com>
+Description: Custom ZSH configuration for Termux
+ Automatically installs and configures ZSH
+ with custom prompts, aliases, and plugins
