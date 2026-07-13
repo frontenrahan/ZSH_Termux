@@ -1,7 +1,0 @@
-Package: zshauto
-Version: 1.0.0
-Architecture: all
-Maintainer: Your Name <your.email@example.com>
-Depends: zsh
-Description: Custom ZSH configuration for Termux
- Direct home installation of custom ZSH setup with plugins.
