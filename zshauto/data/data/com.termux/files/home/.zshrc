@@ -3,18 +3,7 @@ autoload -Uz compinit && compinit
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory sharehistory histignorealldups inc_append_history interactivecomments histignorealldups
-
-zshaddhistory() {
-    local lines=${#${(f)1}}
-    if [[ $lines -gt 1 ]]; then
-        return 1
-    fi
-    if [[ -z $1 ]]; then
-        return 1
-    fi
-    return 0
-}
+setopt appendhistory sharehistory inc_append_history histignorealldups interactivecomments
 
 if [ "$EUID" -eq 0 ]; then
     PROMPT='%F{red}[root]%f %F{244}%~%f # '
@@ -38,6 +27,25 @@ alias clean='pkg clean'
 alias reload='source ~/.zshrc'
 
 cdf() { cd "$1" && ls; }
+
+my_precmd() {
+    local trimmed="${BUFFER_ORIG#"${BUFFER_ORIG%%[![:space:]]*}"}"
+    trimmed="${trimmed%"${trimmed##*[![:space:]]}"}"
+    if [[ -n "$trimmed" && "${trimmed:0:1}" != "#" ]]; then
+        print -s -- "$BUFFER_ORIG"
+    fi
+}
+
+zshaddhistory() {
+    local lines=${#${(f)1}}
+    if [[ $lines -gt 1 ]]; then
+        return 1
+    fi
+    if [[ -z $1 ]]; then
+        return 1
+    fi
+    return 0
+}
 
 bindkey -e
 bindkey '^[[A' up-line-or-beginning-search
