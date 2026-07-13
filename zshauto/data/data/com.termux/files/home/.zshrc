@@ -3,7 +3,18 @@ autoload -Uz compinit && compinit
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory sharehistory histignorealldups inc_append_history interactivecomments
+setopt appendhistory sharehistory histignorealldups inc_append_history interactivecomments histignorealldups
+
+zshaddhistory() {
+    local lines=${#${(f)1}}
+    if [[ $lines -gt 1 ]]; then
+        return 1
+    fi
+    if [[ -z $1 ]]; then
+        return 1
+    fi
+    return 0
+}
 
 if [ "$EUID" -eq 0 ]; then
     PROMPT='%F{red}[root]%f %F{244}%~%f # '
