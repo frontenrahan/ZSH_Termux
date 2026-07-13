@@ -1,0 +1,17 @@
+#!/data/data/com.termux/files/usr/bin/bash
+echo "🗑️ Uninstalling ZSH Auto package..."
+echo "🔄 Switching to bash shell..."
+chsh -s bash
+if [ ! -f $HOME/.bashrc ]; then
+    echo "📝 Creating default .bashrc..."
+    echo "PS1='$ '" > $HOME/.bashrc
+    echo "alias ll='ls -la'" >> $HOME/.bashrc
+    echo "alias l='ls -CF'" >> $HOME/.bashrc
+    echo "alias rm='rm -i'" >> $HOME/.bashrc
+    echo "alias cp='cp -i'" >> $HOME/.bashrc
+    echo "alias mv='mv -i'" >> $HOME/.bashrc
+fi
+echo "🗑️ Removing ZSH config files..."
+rm -f $HOME/.zshrc $HOME/.zsh_history $HOME/.zcompdump
+rm -rf $HOME/.zsh-plugins
+echo "✅ Uninstall complete! Run: exec bash"
