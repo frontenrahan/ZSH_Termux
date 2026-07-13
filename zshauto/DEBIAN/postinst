@@ -1,9 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-echo "╔════════════════════════════════════════╗"
-echo "║   ZSH Auto Installed                  ║"
-echo "╚════════════════════════════════════════╝"
-
 # Set ZSH as default shell
 chsh -s zsh
 
