@@ -8,7 +8,7 @@ One-command custom ZSH setup with plugins.
 curl -sL https://raw.githubusercontent.com/frontenrahan/ZSH_Termux/refs/heads/main/setup | bash
 ```
 
-Manual Install (deb)
+## Manual Install
 
 ```bash
 wget https://github.com/frontenrahan/ZSH_Termux/releases/download/v1.0.0/zshauto_1.0.0_all.deb
