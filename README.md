@@ -12,9 +12,6 @@ Manual Install (deb)
 
 ```bash
 wget https://github.com/frontenrahan/ZSH_Termux/releases/download/v1.0.0/zshauto_1.0.0_all.deb
-```
-
-```bash
 dpkg -i ./zshauto_1.0.0_all.deb
 ```
 
